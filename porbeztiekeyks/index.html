@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/css/paper.css" />
+
+    <link rel="shortcut icon" href="#" />
+
+    <!-- import animate.css -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>1</title>
+  </head>
+  <body onload="stopAnimation(document.getElementById('button-lightsoff').id)">
+    <audio
+      id="audio-tap-se"
+      src="/src/music/tap-se.mov"
+      type="audio/mpeg"
+      style="display: none"
+    ></audio>
+
+    <audio
+    id="audio-typewriter1"
+    src="/src/music/typewriter1.mov"
+    type="audio/mpeg"
+    style="display: none"
+  ></audio>
+
+    <section class="layout">
+      <div class="grow1"></div>
+
+      <div class="grow1" style="margin: 25%" onclick="playSoundOnTap()">
+        <h3>
+          hi
+          <span id="typewriter"></span>
+          <span class="animate__animated animate__fadeIn animate__infinite"
+            >|</span
+          >
+        </h3>
+        <h6 style="display: none; margin-bottom: 0">ifullscreen mo pareh</h6>
+
+        <button
+          onclick="demandFullScreen(), changeFirstDocumentTitle()"
+          id="button-lightsoff"
+          style="display: none"
+          popover-top="lights off muna tayo"
+          class="animate__animated animate__jackInTheBox animate__infinite"
+        >
+          <a href="html/ka.html" target="_blank">...</a>
+        </button>
+      </div>
+
+      <div class="grow1"></div>
+    </section>
+
+    <!-- link script.js -->
+    <script src="scripts/script.js"></script>
+  </body>
+</html>
