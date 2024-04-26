@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>like</title>
+
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+
+    <link
+    rel="stylesheet"
+    href="/css/paper.css"
+    />
+
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="shortcut icon" href="#">
+
+</head>
+<body onload="checkPageLoad()" onclick="playSoundOnTap()">   
+
+  <audio
+  id="audio-tap-se"
+  src="/src/music/tap-se.mov"
+  type="audio/mpeg"
+  style="display: none;"
+  ></audio>
+
+  <audio
+  id="bgmbeats"
+  src="/src/music/yk.mov"
+  type="audio/mpeg"
+  style="display: none"
+  volume="1.0"
+></audio>
+
+    <section id="first" class="section-container">
+        <div class="grow1"></div>
+        <div class="grow1 animate__animated animate__bounce" style="margin: auto 5rem;">
+            <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title" ></h4>
+                  <h5 class="card-subtitle"></h5>
+                  
+                  <p id="first-p1" class="card-text typewriter">kung ang mga hayop ay nakikita sa zoo...</p>
+                  <p id="first-p2" style="display: none;" class="card-text typewriter">bakit ka nanditoo??</p>
+                  
+                  <a id="first-btn1" onclick="changeDisplayText(document.getElementById('first-p1').id, document.getElementById('first-p2').id), hide_btn(this.id, document.getElementById('first-btn2').id)" class="paper-btn animate__animated animate__bounce animate__infinite">...</a>
+                  <a id="first-btn2"  style="display: none;" href="#second" class="paper-btn">...</a>
+                </div>
+              </div>
+        </div>
+        
+            <div class="grow1"></div>
+      </section>
+
+    <section id="second" class="section-container">
+        <div class="grow1"></div>
+
+        <div class="grow1" style="margin: auto 5rem;">
+            <div class="card">
+              <img id="jabe" style="display:none;" width="200px" src="/src/img/jollibee-hehe.jpeg" alt=""> <!--id: jabe-->
+                <div class="card-body">
+                  <h4 class="card-title"></h4>
+                  <h5 class="card-subtitle">
+                  </h5>
+                  <p id="second-p1" class="card-text">
+                      <span class="">kung ang tagalog ng dragonfly ay <span class="badge">tutubi...</span></span>
+                  </p>
+                  <p id="second-p2" style="display: none;" class="card-text">
+                      <span class="">when kaya magiging <span class="badge">imong baby...</span></span>
+                  </p>
+
+                  <a id="second-btn1" onclick="changeDisplayText(document.getElementById('second-p1').id, document.getElementById('second-p2').id), hide_btn(this.id, document.getElementById('jabe-label').id)" class="paper-btn">...</a>
+                  <a id="jabe-button" style="display: none;" href="#fourth" class="paper-btn">...</a>
+                  
+                  <label style="display: none;" id="jabe-label" class="paper-btn" for="modal-1">!</label>
+
+                  <input class="modal-state" id="modal-1" type="checkbox">
+                  <div class="modal">
+                    <label class="modal-bg" for="modal-1"></label>
+                    <div class="modal-body">  
+                      <label onclick="scrollToThird(document.getElementById('jabe-label').id, document.getElementById('jabe-button').id)" class="btn-close" for="modal-1">X</label>
+                      <img src="/src/img/jollibee-hehe.jpeg" width="300px" alt="">
+                    </div>
+                  </div>
+              </div>
+        </div>
+        
+            <div class="grow1"></div>
+      </section>
+
+      <section id="fourth" class="section-container">
+        <div class="grow1"></div>
+
+        <div class="grow1" style="margin: auto 5rem;">
+            <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title"></h4>
+                  <h5 class="card-subtitle"></h5>
+                  <p id="fourth-p1" class="card-text">alam mo ba kung bakit dumidilim sa <span class="badge">gabi?</span></p>
+                  <p id="fourth-p2" style="display: none;" class="card-text">kasi walang <span class="badge warning">araw</span> </p>
+                  <p id="fourth-p3" style="display: none;" class="card-text">na hindi kita <span class="badge danger">namimiss</span> :(</p>
+
+                  <a id="fourth-btn" onclick="changeDisplayText(document.getElementById('fourth-p1').id, document.getElementById('fourth-p2').id), hide_btn(this.id, document.getElementById('fourth-btn1').id)" class="paper-btn">?</a>
+
+                  <a id="fourth-btn1" style="display: none;" onclick="changeDisplayText(document.getElementById('fourth-p2').id, document.getElementById('fourth-p3').id),  hide_btn(this.id, document.getElementById('fourth-btn2').id)" class="paper-btn">?</a>
+                  <a id="fourth-btn2" href="#fourth-1" style="display: none;" class="paper-btn">...</a>
+                </div>
+              </div>
+        </div>
+        
+            <div class="grow1"></div>
+      </section>
+
+      <section id="fourth-1" class="section-container">
+        <div class="grow1"></div>
+
+        <div class="grow1" style="margin: auto 5rem;">
+            <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title"></h4>
+                  <h5 class="card-subtitle"></h5>
+                  <p id="fourth1-p1" class="card-text">haysss kasi naman. makita lang <span class="badge">kita</span></p>
+                  <p id="fourth1-p2" style="display: none;" class="card-text">buo na ang <span class="badge warning">problema</span> ko ;P</p>
+
+                  <a id="fourth1-btn" onclick="changeDisplayText(document.getElementById('fourth1-p1').id, document.getElementById('fourth1-p2').id), hide_btn(this.id, document.getElementById('fourth1-btn2').id)" class="paper-btn">...</a>
+  
+                  <a id="fourth1-btn2" href="#third" style="display: none;" class="paper-btn">...</a>
+                </div>
+              </div>
+        </div>
+        
+            <div class="grow1"></div>
+      </section> 
+
+    <section id="third" class="section-container">
+        <div class="grow1"></div>
+
+        <div class="grow1" style="margin: auto 5rem;">
+            <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title"></h4>
+                  <h5 class="card-subtitle"></h5>
+                  <p class="card-text">de eto na nga kasi...</p>
+                  <a href="#third_1" onclick="crashAlert()" class="paper-btn">?</a> <!--TO DO-->
+                </div>
+              </div>
+        </div>
+
+            <div class="grow1"></div>
+      </section>
+
+      <section id="third_1" class="section-container">
+        <div class="grow1"></div>
+        <div class="grow1 animate__animated animate__bounce" style="margin: auto 5rem;">
+            <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title" ></h4>
+                  <h5 class="card-subtitle"></h5>
+                  
+                  <p id="third1-p1" class="card-text typewriter">so i missed my shot 3 years ago..</p>
+                  <p id="third1-p2" style="display: none;" class="card-text typewriter">shotanginanamankasi</p>
+                  <p id="third1-p3" style="display: none;" class="card-text typewriter">eto na icucrushback na kita</p>
+                  <p id="third1-p4" style="display: none;" class="card-text typewriter">HAHAHAANGKAPAL</p>
+                  <p id="third1-p5" style="display: none;" class="card-text typewriter">umamin ka na kasi beztie</p>
+                  <p id="third1-p6" style="display: none;" class="card-text typewriter">de pero eto na..</p>
+                  
+                  <a id="third1-btn1" onclick="changeDisplayText(document.getElementById('third1-p1').id, document.getElementById('third1-p2').id), hide_btn(this.id, document.getElementById('third1-btn2').id)" class="paper-btn">...</a>
+                  <a id="third1-btn2" style="display: none;" onclick="changeDisplayText(document.getElementById('third1-p2').id, document.getElementById('third1-p3').id), hide_btn(this.id, document.getElementById('third1-btn3').id)" class="paper-btn">...</a>
+                  <a id="third1-btn3" style="display: none;" onclick="changeDisplayText(document.getElementById('third1-p3').id, document.getElementById('third1-p4').id), hide_btn(this.id, document.getElementById('third1-btn4').id)" class="paper-btn">...</a>
+                  <a id="third1-btn4" style="display: none;" onclick="changeDisplayText(document.getElementById('third1-p4').id, document.getElementById('third1-p5').id), hide_btn(this.id, document.getElementById('third1-btn5').id)" class="paper-btn">...</a>
+                  <a id="third1-btn5" style="display: none;" onclick="changeDisplayText(document.getElementById('third1-p5').id, document.getElementById('third1-p6').id), hide_btn(this.id, document.getElementById('third1-btn6').id)" class="paper-btn">...</a>
+                  <a id="third1-btn6" style="display: none;" href="#fifth" class="paper-btn">...</a>
+                </div>
+              </div>
+        </div>
+        
+            <div class="grow1"></div>
+      </section>
+
+<!-- IN PROGRESS -->
+      <!-- <section id="fifth_1" class="section-container">
+        <div class="grow1"></div>
+
+        <div class="grow1" style="margin: auto 5rem;">
+          <div class="card">
+            <img id="jeep" style="display:none;" width="200px" src="/src/img/jeep.jpeg" alt=""> 
+              <div class="card-body">
+                <h4 class="card-title"></h4>
+                <h5 class="card-subtitle">
+                </h5>
+                <p id="fifth1-p1" class="card-text">
+                    <span class=""><span class="badge"></span></span>
+                </p>
+                <p id="fifth1-p2" style="display: none;" class="card-text">
+                    <span class="">when kaya magiging <span class="badge">imong baby...</span></span>
+                </p>
+
+                <a id="fifth1-btn1" onclick="changeDisplayText(document.getElementById('second-p1').id, document.getElementById('second-p2').id), hide_btn(this.id, document.getElementById('fifth1-btn2').id)" class="paper-btn"><3</a>
+                <a id="fifth1-btn2" style="display: none;" href="#fifth" class="paper-btn">...</a>
+                
+                <label id="fifth1-label" class="paper-btn" for="modal-2">!</label>
+
+                <input class="modal-state" id="modal-2" type="checkbox">
+                <div class="modal">
+                  <label class="modal-bg" for="modal-2"></label>
+                  <div class="modal-body"> 
+                    <h4 id="nextline-h4" class="modal-title">para po!</h4> 
+                    <label onclick="scrollToThird(document.getElementById('fifth1-label').id, document.getElementById('fifth1-btn2').id)" class="btn-close" for="modal-2">X</label>
+                    <img id="banat-img-container" src="/src/img/jeep.jpeg" width="400px" alt="">
+
+                    <p id="nextline-p" style="margin: 10px 0 0 0; text-align: right; font-size: 0.6rem;" class="modal-text">ako sa'yo</p>
+
+                    <button onclick="banat_modal(document.getElementById('nextline-h4').id, document.getElementById('nextline-p').id, document.getElementById('banat-img-container').id, 'pre pasok ba', 'ako sa standards mo', '/src/img/basketball-shoot.jpeg')" id="nextline-btn">...</button>
+                    <label style="display: none;" for="modal-2">Nice!</label>
+                  </div>
+                </div>
+            </div>
+      </div>
+        
+            <div class="grow1"></div>
+      </section> -->
+
+      <section id="fifth" class="section-container">
+        <div class="grow1"></div>
+
+        <div class="grow1" style="margin: auto 5rem;">
+            <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title"></h4>
+                  <h5 class="card-subtitle"></h5>
+                  <p id="fifth-p1" class="card-text">what if....</p>
+                  <p id="fifth-p2" style="display: none;" class="card-text">ituloy.....?</p>
+
+                  <button id="fifth-btn" onclick="changeDisplayText(document.getElementById('fifth-p1').id, document.getElementById('fifth-p2').id), hide_btn(this.id, document.getElementById('fifth-btn1').id), hide_btn(this.id, document.getElementById('fifth-btn2').id)">?</button>
+                  <a id="fifth-btn1" href="#sixth" style="display: none;" class="paper-btn">:></a>
+                  <button id="fifth-btn2" onclick="changeDisplayText(document.getElementById('fifth-p2').id, document.getElementById('fifth-p3').id)" style="display: none;" disabled>:<</button>
+                </div>
+              </div>
+        </div>
+
+            <div class="grow1"></div>
+      </section>
+
+    <section id="sixth" class="section-container">
+        <div class="grow1"></div>
+
+        <div class="grow1" style="margin: auto 5rem;">
+            <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title"></h4>
+                  <h5 class="card-subtitle"></h5>
+                  <p class="card-text">HAHAHAHAHAHAHAHAHAHAHaaayYyyYmmserious</p> 
+
+                  <a 
+                  onclick="stopAudio('bgmbeats')"
+                    href="beztie.html" 
+                    id="spotify-link" 
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="paper-btn btn-success">!
+                  </a>
+
+                  <!-- <label id="sixth-label" class="paper-btn btn-danger" for="modal-3">!</label>
+                  <input class="modal-state" id="modal-3" type="checkbox">
+                  <div class="modal">
+                    <label class="modal-bg" for="modal-3"></label>
+                    <div class="modal-body">  
+                      <label onclick="hide_btn(document.getElementById('sixth-label').id, document.getElementById('spotify-link').id)" class="btn-close" for="modal-3">X</label>
+                      <img src="/src/img/flowers.png" width="300px" alt="">
+                    </div>
+                  </div> -->
+                </div>
+              </div>
+        </div>
+            <div class="grow1"></div>
+      </section>
+
+      <script src="/scripts/script-lastpage.js"></script>
+</body>
+</html> 
